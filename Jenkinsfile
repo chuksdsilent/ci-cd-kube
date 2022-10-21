@@ -7,7 +7,7 @@ pipeline {
     }
 */
     environment {
-        registry = "kubeimran/vproappdock"
+        registry = "oshbz/k8-jenkins"
         registryCredential = 'docker-login'
     }
 
