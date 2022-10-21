@@ -73,8 +73,13 @@ pipeline {
             sh "docker rmi $registry:V$BUILD_NUMBER"
           }
         }
-
-    }
+	stage('Kubernetes Deploy') {
+	  agent {label 'k8-server'}
+	    steps {
+	      sh "helm upgrade --install --force vprofile-stack helm/vprofilecharts --set appimage=${registry}:V${BUILD_NUMBER} --namespace prod"
+	    }
+	}
+	 }
 
 
 }
