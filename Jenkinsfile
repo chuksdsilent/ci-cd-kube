@@ -8,7 +8,7 @@ pipeline {
 */
     environment {
         registry = "oshbz/k8-jenkins"
-        registryCredential = 'docker-login'
+        registryCredential = 'dockerlogin'
     }
 
     stages{
