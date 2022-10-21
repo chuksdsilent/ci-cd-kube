@@ -7,7 +7,7 @@ pipeline {
     }
 */
     environment {
-        registry = "oshbz/k8-jenkins"
+        registry = "oshabz/k8-jenkins"
         registryCredential = 'dockerlogin'
     }
 
